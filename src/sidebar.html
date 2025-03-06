@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Sidebar</title>
+</head>
+<body>
+   <!-- <div class="grid grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-4">
+    <div class="">HELLO1</div>
+    <div class="">HELLO2</div>
+    <div class="">HELLO3</div>
+    <div class="">HELLO4</div>
+   </div> -->
+
+   <aside class="fixed top-0 left-0 z-40 w-64 h-screen transition-transform -translate-x-full sm:translate-x-0" aria-label="Sidebar">
+    <div class="h-full px-3 py-4 overflow-y-auto bg-gray-50 dark:bg-gray-800">
+       <ul class="space-y-2 font-medium">
+        <h1 class="text-white font-bolder text-center text-xl">FILTERS</h1>
+        <!-- food type -->
+          <li>
+             <button type="button" id="dropdownButton" class="flex items-center w-full p-2 text-base text-gray-900 transition duration-75 rounded-lg group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700">
+                <i class="fa-solid fa-cart-shopping"></i>
+                   <span class="flex-1 ms-3 text-left rtl:text-right whitespace-nowrap">Food Type</span>
+                   <i class="fa-solid fa-caret-down"></i>
+             </button>
+             <ul id="dropdownMenu" class="view py-2 space-y-2">
+                <li>
+                    <a href="" class="flex items-center w-full p-2 whitespace-nowrap transition duration-75 rounded-lg pl-11 hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700">Vegetarian</a>
+                </li>
+                <li>
+                    <a href="" class="flex items-center w-full p-2 text-white transition duration-75 rounded-lg pl-11 hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700">Non-Vegetarian</a>
+                </li>
+                <li>
+                    <a href="" class="flex items-center w-full p-2 text-white transition duration-75 rounded-lg pl-11 hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700">Combo</a>
+                </li>
+             </ul>
+          </li>
+          <!-- cusine type  -->
+          <li>
+            <button type="button" id="dropdownButton1" class="flex items-center w-full p-2 text-base text-gray-900 transition duration-75 rounded-lg group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700">
+               <i class="fa-solid fa-cart-shopping"></i>
+                  <span class="flex-1 ms-3 text-left rtl:text-right whitespace-nowrap">Cusine Type</span>
+                  <i class="fa-solid fa-caret-down"></i>
+            </button>
+            <ul id="dropdownMenu1" class="view py-2 space-y-2">
+               <li>
+                   <a href="" class="flex items-center w-full p-2 text-gray-900 transition duration-75 rounded-lg pl-11 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700">Chinese</a>
+                </li>
+               <li>
+                   <a href="" class="flex items-center w-full p-2 text-gray-900 transition duration-75 rounded-lg pl-11 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700">Indian</a>
+                </li>
+               <li>
+                   <a href="" class="flex items-center w-full p-2 text-gray-900 transition duration-75 rounded-lg pl-11 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700">Italian</a>
+                </li>
+                <li>
+                    <a href="" class="flex items-center w-full p-2 text-gray-900 transition duration-75 rounded-lg pl-11 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700">Thai</a>
+                </li>
+                <li>
+                    <a href="" class="flex items-center w-full p-2 text-gray-900 transition duration-75 rounded-lg pl-11 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700">French</a>
+                </li>
+            </ul>
+         </li>
+         <!-- location near  -->
+          
+       </ul>
+    </div>
+ </aside>
+ <script>
+    document.getElementById("dropdownButton").addEventListener("click", function () {
+        document.getElementById("dropdownMenu").classList.toggle("hidden");
+    });
+    document.getElementById("dropdownButton1").addEventListener("click", function () {
+        document.getElementById("dropdownMenu1").classList.toggle("hidden");
+    });
+    </script>
+</body>
+</html>
